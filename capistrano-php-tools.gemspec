@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   Currently provides a method to clear the APC to avoid encountering memory allocation errors.
   EOF
   gem.summary       = "Provides various utility tasks for PHP based sites that use capistrano for deployment."
-  gem.homepage      = "https://github.com/BRKalow/capistrano-php-tools"
+  gem.homepage      = "https://github.com/UMNLibraries/capistrano-php-tools"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
