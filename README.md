@@ -30,9 +30,12 @@ Add this line to your `Capfile`
 
 An example which clears the APC after deployment:
 
-    after :finishing, "php_tools:apc_clear"
+    namespace :deploy do
+      after :finishing, "php_tools:apc_clear"
+    end
 
 Credits
 -------
 Initial implementation of the gem functionality developed by [Chad Fennell](https://github.com/chadfennell).
+
 Gem assembled by [Bryce Kalow](https://github.com/BRKalow).
