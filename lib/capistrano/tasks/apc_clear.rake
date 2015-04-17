@@ -5,7 +5,7 @@ namespace :php_tools do
   desc "Clear the APC cache"
   task :apc_clear do
     on roles(:app) do
-      unless exists?(:uri)
+      unless fetch(:uri)
         raise "uri not set, please set it in your deployment or stage settings:\nset :uri, 'http://example.com'"
       end
 
