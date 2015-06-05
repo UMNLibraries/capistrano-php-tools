@@ -24,11 +24,13 @@ CODE
 
       puts "Sending HTTP GET request to: #{apc_clear_uri}"
       response = RestClient.get apc_clear_uri
-      if response.code != 200
+      case response.code
+      when 200
+        execute "rm #{apc_clear_path}"
+      else
         raise "Failed to clear APC cache. GET #{apc_clear_uri} returned #{response.code}"
       end
 
-      execute "rm #{apc_clear_path}"
     end
   end
 end
